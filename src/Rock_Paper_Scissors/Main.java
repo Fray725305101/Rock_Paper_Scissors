@@ -1,6 +1,5 @@
 package Rock_Paper_Scissors;
 
-import java.util.Scanner;
 import java.util.Random; // Импортируем библиотеку для генерации случайных чисел
 
 public class Main {
@@ -25,14 +24,11 @@ public class Main {
         } else { // А если Вася и Петя выкинули одно и то же
             System.out.print("Ничья!"); // То ничья
         }
-    };
+    }
 
     public static Integer choose(String name) { // Метод генерации значений для Васи или Пети
-//        Random randomChoose = new Random(); // Создаём объект randomChoose
-        Scanner scanner = new Scanner(System.in);
-//        int choose = randomChoose.nextInt(3); // Генерим в переменную число от 0 до 2
-        System.out.print("Введите выбор "+name+": ");
-        int choose = scanner.nextInt();
+        Random randomChoose = new Random(); // Создаём объект randomChoose
+        int choose = randomChoose.nextInt(3); // Генерим в переменную число от 0 до 2
         if (choose == 0) { // Здесь и ниже описание того или иного результата
             System.out.println(name+" выкинул камень");
         } else if (choose == 1) {
